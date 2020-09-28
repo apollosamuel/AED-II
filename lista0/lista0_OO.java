@@ -3,7 +3,9 @@ import java.util.Scanner;
 
 
 //THROWS = ABORTA O PROBLEMA 
+
 public class lista0_OO {
+	
 
 	static Scanner input = new Scanner(System.in);
 	static double absoluto; 
@@ -55,5 +57,35 @@ public class lista0_OO {
 		}
 	}
 
+	public static void questao10(boolean a, boolean b, char op) {
+		
+		boolean resultado = true;
+		
+		//Executa a lógica booleana
+		
+		if (op == 'A' || op == 'a'){ //AND
+			
+			resultado = (a & b);
+			
+		}else if(op == 'O' || op == 'o') { // OR
+			
+			resultado = (a | b);
+			
+		}else if(op == 'X' || op == 'x') { //XOR
+			
+			resultado = (a ^ b);
+			
+		}else if(op == 'N' || op == 'n') { //NAND
+			
+			resultado = !(a & b);
+			
+		}else {
+			System.out.println("Operador inválido!");
+		}
+		
+		
+		System.out.println(a + " " + op + " " + b + " " + " : " + resultado);
+	}
+	
 
 }
