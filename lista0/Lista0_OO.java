@@ -83,6 +83,48 @@ public class Lista0_OO {
 		
 	}
 	
+	public static void Lacos(int n) {
+		
+		int numeroAux = n;
+		
+		System.out.println("For");
+		for(int i = 0; i < n; i++) {
+			System.out.println("*");
+		}
+		
+		System.out.println("");
+		
+		System.out.println("While");
+		n = numeroAux;
+		while(n > 0) {
+			System.out.println("*");
+			n--;
+		}
+		
+		System.out.println("");
+		
+		System.out.println("Do/While");
+		n = numeroAux;
+		do {
+			System.out.println("*");
+			n--;
+		}while (n > 0);
+		
+	}
+	
+	
+	public static void QuadradoPerfeito(int n) {
+
+		int raiz = ((int) Math.sqrt(n));
+	
+		if(Math.pow(raiz, 2) == n) {
+			System.out.println("Quadro perfeito");
+		}else {
+			System.out.println("Não é um quadrado perfeito");
+		}
+		
+	}
+	
 	
 	public static void LogicaBooleana(boolean a, boolean b, char op) {
 		
