@@ -144,6 +144,17 @@ public class Lista0_OO {
 		
 	}
 	
+	public static void Potencia2(int n) {
+		
+		int verificaPotencia2 = (int) Math.sqrt(n);
+		
+		if (n == Math.pow(verificaPotencia2, 2)) {
+			System.out.println("É potência de 2");
+		}else {
+			System.out.println("Não é potência de 2.");
+		}
+	}
+	
 	
 	public static void LogicaBooleana(boolean a, boolean b, char op) {
 		
