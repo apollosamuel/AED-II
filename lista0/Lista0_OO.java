@@ -89,15 +89,14 @@ public class Lista0_OO {
 		
 		System.out.println("For");
 		for(int i = 0; i < n; i++) {
-			System.out.println("*");
+			System.out.print("*");
 		}
 		
 		System.out.println("");
 		
 		System.out.println("While");
-		n = numeroAux;
 		while(n > 0) {
-			System.out.println("*");
+			System.out.print("*");
 			n--;
 		}
 		
@@ -106,7 +105,7 @@ public class Lista0_OO {
 		System.out.println("Do/While");
 		n = numeroAux;
 		do {
-			System.out.println("*");
+			System.out.print("*");
 			n--;
 		}while (n > 0);
 		
@@ -155,6 +154,23 @@ public class Lista0_OO {
 		}
 	}
 	
+	public static void NumerosPrimos(int n) {
+		
+		for (int j = 2; j < n; j++) {
+	        if (n % j == 0) {
+	        	System.out.println("0");
+	        }else {
+	        	System.out.println("1");
+	        }
+	         
+	    }
+
+		
+	}
+	
+	public static void Permutacao() {
+		
+	}
 	
 	public static void LogicaBooleana(boolean a, boolean b, char op) {
 		
