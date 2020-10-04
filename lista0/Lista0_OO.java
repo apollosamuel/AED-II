@@ -125,6 +125,25 @@ public class Lista0_OO {
 		
 	}
 	
+	public static void Furacoes(int vento) {
+		if(vento >= 62 && vento <= 118) {
+			System.out.println("Tempestade Tropical");
+		}else if (vento >= 119 && vento <= 153) {
+			System.out.println("Furacão categoria 1");
+		}else if (vento >= 154 && vento <= 177) {
+			System.out.println("Furacão categoria 2");
+		}else if (vento >= 178 && vento <= 209) {
+			System.out.println("Furacão categoria 3");
+		}else if (vento >= 210 && vento <= 249) {
+			System.out.println("Furacão categoria 4");
+		}else if (vento > 249) {
+			System.out.println("Furacão categoria 5");
+		}else {
+			System.out.println("Tempestade normal");
+		}
+		
+	}
+	
 	
 	public static void LogicaBooleana(boolean a, boolean b, char op) {
 		
