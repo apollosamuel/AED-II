@@ -155,16 +155,18 @@ public class Lista0_OO {
 	}
 	
 	public static void NumerosPrimos(int n) {
+		int numDivisores = 0;
 		
-		for (int j = 2; j < n; j++) {
-	        if (n % j == 0) {
-	        	System.out.println("0");
-	        }else {
-	        	System.out.println("1");
-	        }
-	         
+		for (int i = 1; i <= n; i++) {
+			if(n % i == 0) {
+				numDivisores++;
+	        }        
 	    }
-
+		if(numDivisores == 2) {
+			System.out.println("O número é primo.");
+		}else {
+			System.out.println("O número não é primo;");
+		}
 		
 	}
 	
