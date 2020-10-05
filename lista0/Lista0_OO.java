@@ -154,8 +154,9 @@ public class Lista0_OO {
 		}
 	}
 	
-	public static void NumerosPrimos(int n) {
+	public static int NumerosPrimos(int n) {
 		int numDivisores = 0;
+
 		
 		for (int i = 1; i <= n; i++) {
 			if(n % i == 0) {
@@ -163,10 +164,14 @@ public class Lista0_OO {
 	        }        
 	    }
 		if(numDivisores == 2) {
-			System.out.println("O número é primo.");
+			return(1);
 		}else {
-			System.out.println("O número não é primo;");
+			return(2);
 		}
+		
+	}
+	
+	public static void GoldBach() {
 		
 	}
 	
