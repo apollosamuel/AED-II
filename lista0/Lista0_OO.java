@@ -171,8 +171,31 @@ public class Lista0_OO {
 		
 	}
 	
+	public static boolean NumerosPrimos2(int n) {
+
+		for (int i = 2; i <= n; i++) {
+			if(n % i == 0) {
+				return(false);
+	        }        
+	    }
+		return(true);
+	}
+	
 	public static void GoldBach() {
 		
+
+		
+		for(int i = 700; i <= 1200; i++) {
+			if(i%2 == 0) {
+
+			}
+			for (int j = 1; j <= 699; i++) {
+				
+				for(int k = 699; k >= 1; k--) {
+					
+				}
+			}
+		}
 	}
 	
 	public static void Permutacao() {
