@@ -171,7 +171,7 @@ public class Lista0_OO {
 
 	}
 
-	//contém conta regras
+	//teste
 	public static boolean NumerosPrimos2(int n) {
 
 		for (int i = 2; i < n; i++) {
@@ -185,7 +185,7 @@ public class Lista0_OO {
 	public static void GoldBach() {
 
 		int soma = 0;
-
+		//if deixa o código maior, porem mais otimizado, já que utiliza uma função assintotica ao cubo
 
 		for(int i = 7; i <= 12; i++) {
 			if(i % 2 == 0) { // numero par
@@ -215,12 +215,13 @@ public class Lista0_OO {
 		boolean primoK = false;
 
 		for(int i = 7; i <= 12; i++) {
-			if(i % 2 == 0) { // numero par
+			if(i % 2 == 0) { // verifica numero par
 				for (int j = 1; j < (i-1); i++) {
 					for(int k = (i-1); k > 1; k--) {
 
 						primoJ = NumerosPrimos(j); //verificar se o número é primo, retorna true se for
 						primoK = NumerosPrimos(k); //verificar se o número é primo, retorna true se for
+						
 						soma = j+k; // custo computacional 
 
 						if(primoJ && primoK && soma == i) { // comparação para verificar se encaixa na conjectura de gold bach
