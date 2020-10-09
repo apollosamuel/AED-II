@@ -189,10 +189,14 @@ public class Lista0_OO {
 
 		for(int i = 7; i <= 12; i++) {
 			if(i % 2 == 0) { // numero par
-				for (int j = 1; j < (i-1); i++) {
-					if(NumerosPrimos(j) == true) {//verifica o primeiro primo
+				
+				for (int j = 1; j < (i-1); j++) {
+					
+					if(NumerosPrimos(j)) {//verifica o primeiro primo
+						
 						for(int k = (i-1); k > 1; k--) {
-							if(NumerosPrimos(k) == true){ //verifica o primeiro primo
+							
+							if(NumerosPrimos(k)){ //verifica o primeiro primo
 
 								soma = j+k; // custo computacional 
 
