@@ -186,20 +186,45 @@ public class Lista0_OO {
 
 		int soma = 0;
 
-		for(int i = 700; i <= 1200; i++) {
+
+		for(int i = 7; i <= 12; i++) {
 			if(i % 2 == 0) { // numero par
-				for (int j = 1; j < 700; i++) {
+				for (int j = 1; j < (i-1); i++) {
 					if(NumerosPrimos(j) == true) {//verifica o primeiro primo
-						for(int k = 699; k > 1; k--) {
+						for(int k = (i-1); k > 1; k--) {
 							if(NumerosPrimos(k) == true){ //verifica o primeiro primo
 
-								soma = k+j; // custo computacional 
+								soma = j+k; // custo computacional 
 
 								if(soma == i) { // comparação para verificar se encaixa na conjectura de gold bach
 									System.out.println(j + " + " + k + " = " + i);
 								}
 							}
 
+						}
+					}
+				}
+			}
+		}
+	}
+
+	public static void GoldBach2() {
+
+		int soma = 0;
+		boolean primoJ = false;
+		boolean primoK = false;
+
+		for(int i = 7; i <= 12; i++) {
+			if(i % 2 == 0) { // numero par
+				for (int j = 1; j < (i-1); i++) {
+					for(int k = (i-1); k > 1; k--) {
+
+						primoJ = NumerosPrimos(j); //verificar se o número é primo, retorna true se for
+						primoK = NumerosPrimos(k); //verificar se o número é primo, retorna true se for
+						soma = j+k; // custo computacional 
+
+						if(primoJ && primoK && soma == i) { // comparação para verificar se encaixa na conjectura de gold bach
+							System.out.println(j + " + " + k + " = " + i);
 						}
 					}
 				}

@@ -4,7 +4,7 @@ public class conjecturaGoldBach {
 
 	public static void main(String[] args) {
 
-		Lista0_OO.GoldBach();
+		Lista0_OO.GoldBach2();
 
 	}
 
