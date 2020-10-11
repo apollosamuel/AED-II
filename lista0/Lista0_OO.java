@@ -189,13 +189,13 @@ public class Lista0_OO {
 
 		for(int i = 700; i <= 1200; i++) {
 			if(i % 2 == 0) { // numero par
-				
+
 				for (int j = 1; j < (i-1); j++) {
-					
+
 					if(NumerosPrimos(j)) {//verifica o primeiro primo
-						
+
 						for(int k = (i-1); k > 1; k--) {
-							
+
 							if(NumerosPrimos(k)){ //verifica o primeiro primo
 
 								soma = j+k; // custo computacional 
@@ -225,7 +225,7 @@ public class Lista0_OO {
 
 						primoJ = NumerosPrimos(j); //verificar se o número é primo, retorna true se for
 						primoK = NumerosPrimos(k); //verificar se o número é primo, retorna true se for
-						
+
 						soma = j+k; // custo computacional 
 
 						if(primoJ && primoK && soma == i) { // comparação para verificar se encaixa na conjectura de gold bach
@@ -238,23 +238,82 @@ public class Lista0_OO {
 	}
 
 	public static void PermutacaoA() {
-		
+
 		int frequencia = 0;
-		
+
 		System.out.println("Digite uma sequencia de números: ");
 		String seqCaracteres = input.nextLine();
-		System.out.println("Digite uma sequencia de números: ");
+		System.out.println("Digite um caracter para ser pesquisado: ");
 		char caracter = input.next().charAt(0);
-		
-		
+
+
 		for(int i = 0; i < seqCaracteres.length(); i++) {
 			if(seqCaracteres.charAt(i) == caracter) {
 				frequencia++;
 			}
-			
+
 		}
 		System.out.println("O caracter " + caracter + " foi encontrado na sequencia " + seqCaracteres + " " + frequencia + " vezes.");
 	}
+
+	public static void PermutacaoB() {
+
+		System.out.println("Digite uma sequencia de números: ");
+		String seqCaracteres1 = input.nextLine();
+		System.out.println("Digite outra sequencia de números: ");
+		String seqCaracteres2 = input.nextLine();
+
+		char[] v = seqCaracteres1.toCharArray();
+		for (int i = 0; i < v.length; i++) {
+			System.out.println(v[i] + " ");
+		}
+		
+		System.out.println("");
+		
+		char[] x = seqCaracteres2.toCharArray();
+		for (int i = 0; i < v.length; i++) {
+			System.out.println(x[i] + " ");
+		}
+		
+		//as duas sequencias devem ser do mesmo tamanho
+		
+		if(seqCaracteres1.length() == seqCaracteres2.length()) {
+
+			int[] vetNumeros1 = new int[] {0,0,0,0,0,0,0,0,0,0};
+			int[] vetNumeros2 = new int[] {0,0,0,0,0,0,0,0,0,0};
+
+			for(int i = 0; i < seqCaracteres1.length(); i++) {
+
+				vetNumeros1[ Integer.parseInt(""+seqCaracteres1.charAt(i)) ] = vetNumeros1[ Integer.parseInt(""+seqCaracteres1.charAt(i))];
+				vetNumeros2[ Integer.parseInt(""+seqCaracteres2.charAt(i)) ] = vetNumeros2[ Integer.parseInt(""+seqCaracteres2.charAt(i))];			
+			}
+			
+			//verifica se os 2 vetores sao iguais
+			
+			boolean vetoresIguais = true;
+			for(int i = 0; i < vetNumeros1.length; i++) {
+				if(vetNumeros1[i] != vetNumeros2[i]) {
+					vetoresIguais = false;
+				}
+			}
+			
+			if(vetoresIguais) {
+				System.out.println("A primeira sequencia é permutação da segunda.");
+			}else {
+				System.out.println("A primeira sequencia não é permutação da segunda.");
+			}
+
+
+		}else {
+			System.out.println("Não são iguais");
+		}
+
+	}
+
+
+
+
+
 
 	public static void LogicaBooleana(boolean a, boolean b, char op) {
 
