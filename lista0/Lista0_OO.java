@@ -187,7 +187,7 @@ public class Lista0_OO {
 		int soma = 0;
 		//if deixa o código maior, porem mais otimizado, já que utiliza uma função assintotica ao cubo
 
-		for(int i = 7; i <= 12; i++) {
+		for(int i = 700; i <= 1200; i++) {
 			if(i % 2 == 0) { // numero par
 				
 				for (int j = 1; j < (i-1); j++) {
@@ -220,7 +220,7 @@ public class Lista0_OO {
 
 		for(int i = 7; i <= 12; i++) {
 			if(i % 2 == 0) { // verifica numero par
-				for (int j = 1; j < (i-1); i++) {
+				for (int j = 1; j < (i-1); j++) {
 					for(int k = (i-1); k > 1; k--) {
 
 						primoJ = NumerosPrimos(j); //verificar se o número é primo, retorna true se for
@@ -237,8 +237,23 @@ public class Lista0_OO {
 		}
 	}
 
-	public static void Permutacao() {
-
+	public static void PermutacaoA() {
+		
+		int frequencia = 0;
+		
+		System.out.println("Digite uma sequencia de números: ");
+		String seqCaracteres = input.nextLine();
+		System.out.println("Digite uma sequencia de números: ");
+		char caracter = input.next().charAt(0);
+		
+		
+		for(int i = 0; i < seqCaracteres.length(); i++) {
+			if(seqCaracteres.charAt(i) == caracter) {
+				frequencia++;
+			}
+			
+		}
+		System.out.println("O caracter " + caracter + " foi encontrado na sequencia " + seqCaracteres + " " + frequencia + " vezes.");
 	}
 
 	public static void LogicaBooleana(boolean a, boolean b, char op) {
