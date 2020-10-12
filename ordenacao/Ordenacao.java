@@ -10,7 +10,7 @@ public class Ordenacao {
 		Random gerador = new Random();
 		int[] numeros = gerador.ints(0, intervalo).limit(qtde).toArray(); //ints vai gerar números inteiros 
 		return(numeros);                                                 //.limit = definir a quantidade de números
-																		//toArray transforma os números para o vetor
+		//toArray transforma os números para o vetor
 	}
 
 	//Exibe o vetor passado como parâmetro
@@ -36,42 +36,67 @@ public class Ordenacao {
 				}
 			}
 		}
-		
+
 		System.out.println("Vetor ordenado BubbleSort: " + Ordenacao.exibirVetor(vet));
-		
+
 	}
-	
+
 	public static void insertionSort(int[] vet) {
-		
+
 		int chave, j;
-		
+
 		for(int i = 1; i < vet.length; i++) {
 			chave = vet[i];
 			j = i-1;
 			while(j >= 0 && vet[j] > chave) {
 				vet[j+1] = vet[j];
-				j = chave;
+				j = j-1;
 			}
-			vet[j+1] = vet[i];
-			
+			vet[j+1] = chave;
+
 		}
 		System.out.println("Vetor ordenado Insertion Sort: " + Ordenacao.exibirVetor(vet));
 	}
 
-	
-	public static void quickSort(int[] vet) {
 
+	public static int[] quickSort(int[] vet, int inicio, int fim) {
 
-		
+		if(inicio < fim) {
+			int posicaoPivo = separar(vet, inicio, fim);
+			quickSort(vet, inicio, posicaoPivo - 1);
+			quickSort(vet, posicaoPivo + 1, fim);
+		}
+		return(vet);
 	}
 
-	
+	private static int separar(int[] vet, int inicio, int fim) {
+		int pivo = vet[inicio];
+		int i = inicio + 1, f = fim;
+		while (i <= f) {
+			if(vet[i] <= pivo) {
+				i++;
+			} else if(pivo < vet[f]) {
+				f--;
+			} else {
+				int temp = vet [i];
+				vet[i] = vet[f];
+				vet[f] = temp;
+				i++;
+				f--;
+			}
+		}
+		vet[inicio] = vet[f];
+		vet[f] = pivo;
+		return(f);
+	}
+
+
 	public static void mergeSort(int[] vet) {
 
 
-		
+
 	}
 
-	
+
 
 }

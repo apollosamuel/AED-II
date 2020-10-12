@@ -13,9 +13,19 @@ public class Ordenacao_Main {
 		
 		System.out.println("");
 		
-		System.out.println("Vetor padrão: " + Ordenacao.exibirVetor(vetor));
+		int vetor2[] = Ordenacao.geradorAleatorio(10,10);
+		
+		System.out.println("Vetor padrão: " + Ordenacao.exibirVetor(vetor2));
 
-		Ordenacao.insertionSort(vetor);
+		Ordenacao.insertionSort(vetor2);
+		
+		System.out.println("");
+		
+		int vetor3[] = Ordenacao.geradorAleatorio(10, 10);
+		
+		System.out.println("Vetor padrão: " + Ordenacao.exibirVetor(vetor3));
+
+		System.out.println("Vetor ordenado Quick Sort: " + Ordenacao.exibirVetor(Ordenacao.quickSort(vetor3, 0, vetor3.length-1)));
 
 	}
 
