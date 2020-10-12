@@ -9,7 +9,7 @@ public class Ordenacao_BubbleSort {
 		
 		System.out.println("Vetor Desodernado: " + Ordenacao.exibirVetor(vetor));
 
-		Ordenacao.BubbleSort(vetor);
+		Ordenacao.bubbleSort(vetor);
 
 	}
 

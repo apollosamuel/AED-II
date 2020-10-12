@@ -1,5 +1,5 @@
 package ordenacao;
-import java.util.*;
+import java.util.Random;
 
 public class Ordenacao {
 
@@ -22,7 +22,7 @@ public class Ordenacao {
 	}
 
 
-	public static void BubbleSort(int[] vet) {
+	public static void bubbleSort(int[] vet) {
 
 
 		for (int i = 0; i < vet.length; i++) {
@@ -39,5 +39,26 @@ public class Ordenacao {
 		System.out.println("Vetor ordenado: " + Ordenacao.exibirVetor(vet));
 		
 	}
+	
+	public static void insertionSort(int[] vet) {
+
+
+	}
+
+	
+	public static void quickSort(int[] vet) {
+
+
+		
+	}
+
+	
+	public static void mergeSort(int[] vet) {
+
+
+		
+	}
+
+	
 
 }
