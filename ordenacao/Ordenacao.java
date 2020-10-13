@@ -70,9 +70,9 @@ public class Ordenacao {
 	}
 
 	private static int separar(int[] vet, int inicio, int fim) {
-		int pivo = vet[inicio];
-		int i = inicio + 1, f = fim;
-		while (i <= f) {
+		int pivo = vet[inicio]; //Posição 0
+		int i = inicio + 1, f = fim; // i = Posição 2, F = 7
+		while (i <= f) { 
 			if(vet[i] <= pivo) {
 				i++;
 			} else if(pivo < vet[f]) {
@@ -91,12 +91,43 @@ public class Ordenacao {
 	}
 
 
-	public static void mergeSort(int[] vet) {
+	public static int[] mergeSort(int[] vet, int baixo, int alto) {
 
 
+		if (baixo < alto) {
+			int medio = (baixo + alto) / 2;
+			mergeSort(vet, baixo, medio);
+			mergeSort(vet, medio+1, alto);
+			merge(vet, baixo, medio, alto);
+		}
+		return(vet);
 
 	}
 
-
+	public static void merge(int[] vet, int baixo, int medio, int alto) {
+		int [] vetTemp = new int [vet.length];
+		for(int i = baixo; i <= alto; i++) {
+			vetTemp[i] = vet[i];
+		}
+		
+		int vetEsquerdo = baixo;
+		int vetDireito = medio+1;
+		int atual = baixo;
+		
+		while(vetEsquerdo <= medio && vetDireito <= alto) {
+			if (vetTemp[vetEsquerdo] <= vetTemp[vetDireito]) {
+				vet[atual] = vetTemp[vetEsquerdo];
+				vetEsquerdo++;
+			}else{
+				vet[atual] = vetTemp[vetDireito];
+				vetDireito++;
+			}
+			atual++;
+		}
+		int restante = medio - vetEsquerdo;
+		for(int i = 0; i <= restante; i++) {
+			vet[atual+i] = vetTemp[vetEsquerdo+i];
+		}
+	}
 
 }
