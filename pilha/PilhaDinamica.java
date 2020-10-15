@@ -87,6 +87,17 @@ public class PilhaDinamica {
 
 		return(copiaPilha);
 	}
+	
+	public Object invertePilha() {
+		
+		PilhaDinamica pilhaInvertida = new PilhaDinamica();
+
+		while(!vazia() ) {
+			pilhaInvertida.empilhar(desempilhar());
+		}	
+		return(pilhaInvertida);
+	}
+
 
 	public String toString() {
 		String pilhaCheia = "";
@@ -96,7 +107,7 @@ public class PilhaDinamica {
 		}else {
 			PilhaDinamica copiaPilha = (PilhaDinamica) copiar();
 			while(!copiaPilha.vazia() ) {
-				pilhaCheia += "/n" + copiaPilha.desempilhar();
+				pilhaCheia += "\n" + copiaPilha.desempilhar();
 			}
 		}
 

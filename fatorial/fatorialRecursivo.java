@@ -10,7 +10,6 @@ public class fatorialRecursivo {
 			return (n*fatorialRecursivo(n-1));
 		}
 		
-
 		
 	}
 
