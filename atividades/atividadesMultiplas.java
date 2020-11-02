@@ -4,16 +4,16 @@ import java.util.Random;
 
 public class atividadesMultiplas {
 	
-	// Gerar uma sequencia de dados aleatorios
+	// Gerar uuma sequencia de dados aleatorios
 
 	public static int[] geradorAleatorio(int qtde, int intervalo) {
 		Random gerador = new Random();
-		int[] numeros = gerador.ints(0, intervalo).limit(qtde).toArray(); //ints vai gerar números inteiros 
-		return(numeros);                                                 //.limit = definir a quantidade de números
-		//toArray transforma os números para o vetor
+		int[] numeros = gerador.ints(0, intervalo).limit(qtde).toArray(); //ints vai gerar nÃºmeros inteiros 
+		return(numeros);                                                 //.limit = definir a quantidade de nÃºmeros
+		//toArray transforma os nÃºmeros para o vetor
 	}
 
-	//Exibe o vetor passado como parâmetro
+	//Exibe o vetor passado como parÃ¢metro
 	public static String exibirVetor(int[] vet) {
 		String strVet = "";
 		for(int i = 0; i < vet.length; i++) {
@@ -21,8 +21,8 @@ public class atividadesMultiplas {
 		}
 		return(strVet);
 	}
-    //Implemente, na linguagem Java de programação, o algoritmo Insertion-Sort de ordenação. 
-	//Porém, considere a ordenação decrescente, ou seja, dado um vetor V de n números inteiros aleatórios, o resultado da ordenação deve apresentar um vetor ordenado do maior para o menor valor.
+    //Implemente, na linguagem Java de programaÃ§Ã£o, o algoritmo Insertion-Sort de ordenaÃ§Ã£o. 
+	//PorÃ©m, considere a ordenaÃ§Ã£o decrescente, ou seja, dado um vetor V de n nÃºmeros inteiros aleatÃ³rios, o resultado da ordenaÃ§Ã£o deve apresentar um vetor ordenado do maior para o menor valor.
 	
 	public static void insertionSortInverso(int[] vet) {
 
@@ -31,7 +31,7 @@ public class atividadesMultiplas {
 		for(int i = 1; i < vet.length; i++) {
 			chave = vet[i];
 			j = i-1;
-			while(j >= 0 && vet[j] < chave) { //Somente trocar a verificação
+			while(j >= 0 && vet[j] < chave) { //Somente trocar a verificaÃ§Ã£o
 				vet[j+1] = vet[j];
 				j = j-1;
 			}
@@ -46,7 +46,7 @@ public class atividadesMultiplas {
 
 		int vetorRandom[] = atividadesMultiplas.geradorAleatorio(10,10);
 		
-		System.out.println("Vetor padrão: " + atividadesMultiplas.exibirVetor(vetorRandom));
+		System.out.println("Vetor padrÃ£o: " + atividadesMultiplas.exibirVetor(vetorRandom));
 		
 		atividadesMultiplas.insertionSortInverso(vetorRandom);
 		
